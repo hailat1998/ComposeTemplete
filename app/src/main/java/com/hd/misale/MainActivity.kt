@@ -67,11 +67,15 @@ fun BottomNavigationContent(navController: NavController, list : List<Destinatio
     val navBackStackEntry by navController.currentBackStackEntryAsState()
     val currentRoute = navBackStackEntry?.destination?.route
     NavigationBar {
-        list.forEach{
-            NavigationBarItem(selected = true, onClick = { /*TODO*/ },
-                icon = { Icon(painterResource(id = it.icon), null)})
+        NavigationBarItem(selected = true, onClick = { /*TODO*/ },
+            icon = { Icon(painterResource(id = R.drawable.home_fill0_wght400_grad0_opsz24), null)})
+        NavigationBarItem(selected = true, onClick = { /*TODO*/ },
+            icon = { Icon(painterResource(id = R.drawable.search_fill0_wght400_grad0_opsz24), null)})
+        NavigationBarItem(selected = true, onClick = { /*TODO*/ },
+            icon = { Icon(painterResource(id = R.drawable.grade_fill0_wght400_grad0_opsz24), null)})
+        NavigationBarItem(selected = true, onClick = { /*TODO*/ },
+            icon = { Icon(painterResource(id = R.drawable.acute_fill0_wght400_grad0_opsz24), null)})
         }
-    }
 }
 
 @Composable
@@ -79,10 +83,15 @@ fun NavigationRailContent(navController: NavController, list: List<Destination>)
     val navBackStackEntry by navController.currentBackStackEntryAsState()
     val currentRoute = navBackStackEntry?.destination?.route
     NavigationRail {
-        list.forEach{
-            NavigationRailItem(selected = true, onClick = { /*TODO*/ },
-                icon = { Icon(painterResource(id = it.icon), null)})
-        }
+
+        NavigationRailItem(selected = true, onClick = { /*TODO*/ },
+                icon = { Icon(painterResource(id = R.drawable.home_fill0_wght400_grad0_opsz24), null)})
+        NavigationRailItem(selected = true, onClick = { /*TODO*/ },
+            icon = { Icon(painterResource(id = R.drawable.search_fill0_wght400_grad0_opsz24), null)})
+        NavigationRailItem(selected = true, onClick = { /*TODO*/ },
+            icon = { Icon(painterResource(id = R.drawable.grade_fill0_wght400_grad0_opsz24), null)})
+        NavigationRailItem(selected = true, onClick = { /*TODO*/ },
+            icon = { Icon(painterResource(id = R.drawable.acute_fill0_wght400_grad0_opsz24), null)})
 
     }
 }

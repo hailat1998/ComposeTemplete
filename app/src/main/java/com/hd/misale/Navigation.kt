@@ -36,10 +36,10 @@ fun AppNav( navController: NavHostController){
 }
 
 sealed class Destination(val route : String , val title : String , val icon : Int){
-    data object Home : Destination("home" , "Home" , R.drawable.ic_launcher_foreground)
-    data object Fav : Destination("fav" , "Fav" , R.drawable.ic_launcher_foreground)
-    data object Recent : Destination("recent" , "Recent" , R.drawable.ic_launcher_foreground)
-    data object SearchView : Destination("search" , "Search", R.drawable.ic_launcher_foreground)
+    data object Home : Destination("home" , "Home" , icon = R.drawable.baseline_search_24)
+    data object Fav : Destination("fav" , "Fav" , icon = R.drawable.baseline_search_24)
+    data object Recent : Destination("recent" , "Recent" , icon = R.drawable.baseline_search_24)
+    data object SearchView : Destination("search" , "Search", icon = R.drawable.baseline_search_24)
     companion object{
         val list = listOf(Home , Fav , Recent, SearchView)
     }
