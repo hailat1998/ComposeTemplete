@@ -67,14 +67,10 @@ fun BottomNavigationContent(navController: NavController, list : List<Destinatio
     val navBackStackEntry by navController.currentBackStackEntryAsState()
     val currentRoute = navBackStackEntry?.destination?.route
     NavigationBar {
-        NavigationBarItem(selected = true, onClick = { /*TODO*/ },
-            icon = { Icon(painterResource(id = R.drawable.home_fill0_wght400_grad0_opsz24), null)})
-        NavigationBarItem(selected = false, onClick = { /*TODO*/ },
-            icon = { Icon(painterResource(id = R.drawable.home_fill0_wght400_grad0_opsz24), null)})
-        NavigationBarItem(selected = false, onClick = { /*TODO*/ },
-            icon = { Icon(painterResource(id = R.drawable.home_fill0_wght400_grad0_opsz24), null)})
-        NavigationBarItem(selected = false, onClick = { /*TODO*/ },
-            icon = { Icon(painterResource(id = R.drawable.home_fill0_wght400_grad0_opsz24), null)})
+        list.forEach{
+            NavigationBarItem(selected = true, onClick = { /*TODO*/ },
+                icon = { Icon(painterResource(id = it.icon), null)})
+        }
     }
 }
 
@@ -83,14 +79,11 @@ fun NavigationRailContent(navController: NavController, list: List<Destination>)
     val navBackStackEntry by navController.currentBackStackEntryAsState()
     val currentRoute = navBackStackEntry?.destination?.route
     NavigationRail {
-        NavigationRailItem(selected = true, onClick = { /*TODO*/ },
-            icon = { Icon(painterResource(id = R.drawable.home_fill0_wght400_grad0_opsz24), null)})
-        NavigationRailItem(selected = false, onClick = { /*TODO*/ },
-            icon = { Icon(painterResource(id = R.drawable.home_fill0_wght400_grad0_opsz24), null)})
-        NavigationRailItem(selected = false, onClick = { /*TODO*/ },
-            icon = { Icon(painterResource(id = R.drawable.home_fill0_wght400_grad0_opsz24), null)})
-        NavigationRailItem(selected = false, onClick = { /*TODO*/ },
-            icon = { Icon(painterResource(id = R.drawable.home_fill0_wght400_grad0_opsz24), null)})
+        list.forEach{
+            NavigationRailItem(selected = true, onClick = { /*TODO*/ },
+                icon = { Icon(painterResource(id = it.icon), null)})
+        }
+
     }
 }
 
